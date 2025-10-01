@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="hu-HU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EU Csomagküldés - Carego</title>
+    <meta name="google-site-verification" content="jM0J9nSlbdc1fnQFSxlZYqpEP2P939tidaDXnnHgUvw" />
+    <meta name="description" content="Megbízható EU csomagküldés háztól-házig. A Carego gyors, megbízható és precíz szállítást kínál Magyarország és Európa országai között, kedvező árakon.">
+    <meta name="keywords" content="csomagküldés, EU csomagküldés, szállítás, futár, Carego, csomagszállítás Európába">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+    <style>
+    /* --- RESZPONZÍV ALAPOK ÉS FINOMHANGOLÁS --- */
+    html {
+        scroll-behavior: smooth; /* Finom görgetés a linkekre kattintva */
+    }
+    body {
+        overflow-x: hidden; /* Vízszintes túlcsordulás megakadályozása */
+    }
+    * {
+        box-sizing: border-box;
+    }
+    .service-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+/* A lenyíló menü szülőjének jelzése egy kis nyíllal */
+.has-dropdown > a::after {
+    content: ' ▼'; /* A lefelé mutató nyíl. Módosíthatod, ha szeretnéd. */
+    font-size: 0.7em; /* Kisebb méret, hogy ne legyen tolakodó */
+    margin-left: 5px; /* Kis térköz a szöveg és a nyíl között */
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* Opcionális: A nyíl forog, amikor a menü nyitva van (hover) */
+.has-dropdown:hover > a::after {
+    transform: rotate(180deg);
+}
+    /* --- Alapbeállítások és Változók --- */
+    :root {
+        --primary-color: #003366; /* Sötétkék */
+        --secondary-color: #D4AF37; /* Arany / Sárga akcentus */
+        --text-color: #333;
+        --light-gray: #f4f4f4;
+        --white: #ffffff;
+        --font-main: 'Arial', sans-serif;
+    }
+
+    body {
+        font-family: var(--font-main);
+        margin: 0;
+        padding: 0;
+        color: var(--text-color);
+        line-height: 1.6;
+        background-color: var(--white);
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    h1, h2, h3 {
+        color: var(--primary-color);
+    }
+
+    a {
+        color: var(--secondary-color);
+        text-decoration: none;
+    }
+
+    /* --- Fejléc (Header) --- */
+    header {
+        background-color: var(--white);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .top-bar {
+        background-color: var(--light-gray);
+        padding: 4px 0;
+        font-size: 0.8em;
+    }
+    
+    .top-bar .container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .top-bar a {
+        color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .flag-icon {
+        width: 20px;
+        height: auto;
+        border: 1px solid #ccc;
+    }
+
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+    }
+    
+    .logo a {
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo img {
+        max-height: 75px;
+        width: auto;
+        display: block;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 25px;
+    }
+
+    nav a {
+        color: var(--primary-color);
+        font-weight: bold;
+        padding-bottom: 5px;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+        border-color: var(--secondary-color);
+    }
+    
+    .cta-button {
+        background-color: #C06014;
+        color: var(--white);
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+        background-color: #A55311;
+    }
+
+    /* --- Hero Szekció (Fő kép) --- */
+    .hero {
+        background-image: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), url('https://i.imgur.com/8JW7bMh.jpg');
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        text-align: center;
+        padding: 100px 20px;
+    }
+    
+    .hero h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+        color: var(--white);
+    }
+
+    .hero p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+
+    /* --- SZOLGÁLTATÁSOK SZEKCIÓ (LETISZTÍTVA) --- */
+    .services-section {
+        padding: 60px 20px;
+        text-align: center;
+    }
+    .services-intro {
+        max-width: 800px;
+        margin: 0 auto 40px auto;
+    }
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        text-align: left;
+    }
+    .service-card {
+        background-color: #f9f9f9;
+        padding: 30px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+    .service-icon {
+        font-size: 2.5em;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+    }
+    .service-card h3 {
+        margin-top: 0;
+    }
+
+    /* --- Árak Szekció --- */
+    .pricing-section {
+        padding: 60px 0;
+        background-color: var(--light-gray);
+        text-align: center;
+    }
+    .pricing-section h2 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+    .pricing-section .subtitle {
+        font-size: 1.1em;
+        color: #666;
+        margin-bottom: 40px;
+    }
+
+    /* --- Lábléc (Footer) --- */
+    footer {
+        background-color: var(--primary-color);
+        color: var(--white);
+        padding: 40px 0;
+        margin-top: 60px;
+    }
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+    }
+    footer h3 {
+        color: var(--secondary-color);
+        margin-bottom: 20px;
+    }
+    footer p, footer a {
+        color: var(--light-gray);
+    }
+    footer ul {
+        list-style: none;
+        padding: 0;
+    }
+    footer ul li {
+        margin-bottom: 10px;
+    }
+    .copyright {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid #335c85;
+        font-size: 0.9em;
+        color: var(--light-gray);
+    }
+    .social-icons {
+        margin-top: 15px;
+    }
+    .social-icons a {
+        display: inline-block;
+        width: 40px; height: 40px; line-height: 40px; text-align: center;
+        background-color: var(--white); color: var(--primary-color);
+        border-radius: 50%; font-size: 1.2em;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .social-icons a:hover {
+        background-color: var(--secondary-color);
+        color: var(--white);
+    }
+
+    /* --- MODÁL ÁLTALÁNOS STÍLUSOK --- */
+    .modal-overlay {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: none; justify-content: center; align-items: center;
+        z-index: 2000; opacity: 0; transition: opacity 0.3s ease;
+    }
+    .modal-content {
+        background-color: var(--white); padding: 30px 40px; border-radius: 8px;
+        max-width: 500px; width: 90%; position: relative;
+        transform: scale(0.9); transition: transform 0.3s ease;
+    }
+    .close-button {
+        position: absolute; top: 10px; right: 20px;
+        font-size: 2.5em; font-weight: bold; color: #aaa;
+        cursor: pointer; line-height: 1;
+    }
+    .close-button:hover { color: var(--text-color); }
+    .modal-content h2 { margin-top: 0; color: var(--primary-color); }
+    .modal-content .form-group { margin-bottom: 20px; }
+    .modal-content .form-group label { display: block; margin-bottom: 8px; font-weight: bold; }
+    .modal-content .form-group input, .modal-content .form-group textarea {
+        width: 100%; padding: 12px; border: 1px solid #ccc;
+        border-radius: 5px; font-size: 1em; font-family: var(--font-main);
+        box-sizing: border-box;
+    }
+    .modal-content .submit-btn {
+        width: 100%; padding: 15px; border: none; border-radius: 5px;
+        background-color: #C06014; color: var(--white); font-size: 1.2em;
+        font-weight: bold; cursor: pointer; transition: background-color 0.3s;
+    }
+    .modal-content .submit-btn:hover { background-color: #A55311; }
+
+    /* --- RÉSZLETES ÁRAK MODÁL SPECIFIKUS STÍLUSOK --- */
+    .modal-content.wide { max-width: 900px; }
+    .pricing-table {
+        width: 100%; border-collapse: collapse; margin-bottom: 30px; font-size: 0.9em;
+    }
+    .pricing-table th, .pricing-table td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    .pricing-table th { background-color: var(--light-gray); font-weight: bold; color: var(--primary-color); }
+    .pricing-table tbody tr:nth-child(even) { background-color: #f9f9f9; }
+    .small-text { font-size: 0.9em; color: #666; margin-top: -15px; margin-bottom: 15px; }
+    .info-list { list-style-type: '✓ '; padding-left: 20px; text-align: left; }
+    .disclaimer { font-style: italic; font-size: 0.8em; color: #777; text-align: center; margin-top: 20px; }
+    .modal-footer {
+        text-align: center; margin-top: 30px;
+        padding-top: 20px; border-top: 1px solid var(--light-gray);
+    }
+    
+    /* --- COOKIE BANNER STÍLUSOK --- */
+    #cookie-banner {
+        position: fixed; bottom: 0; left: 0; width: 100%;
+        background-color: rgba(38, 38, 38, 0.95);
+        color: #f1f1f1; padding: 15px 25px;
+        display: none; justify-content: space-between; align-items: center;
+        z-index: 3000; font-size: 0.9em;
+        backdrop-filter: blur(5px);
+    }
+    #cookie-banner p { margin: 0; padding-right: 20px; }
+    #cookie-banner a { color: #fff; text-decoration: underline; }
+    #cookie-accept-btn {
+        background-color: #C06014; color: #fff; border: none;
+        padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold;
+        white-space: nowrap;
+    }
+
+    /* --- HAMBURGER MENÜ STÍLUSOK --- */
+    #hamburger-btn {
+        display: none; background: none; border: none;
+        cursor: pointer; padding: 10px; z-index: 1100;
+    }
+    #hamburger-btn span {
+        display: block; width: 25px; height: 3px;
+        background-color: var(--primary-color); margin: 5px 0;
+        transition: all 0.3s ease-in-out;
+    }
+    #hamburger-btn.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    #hamburger-btn.open span:nth-child(2) { opacity: 0; }
+    #hamburger-btn.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    
+    /* --- LENYÍLÓ MENÜ STÍLUSOK --- */
+    .has-dropdown { position: relative; }
+    .dropdown-menu {
+        display: none; position: absolute; top: 100%; left: 0;
+        background-color: var(--white); list-style: none; padding: 10px 0;
+        margin: 0; min-width: 200px; box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        border-radius: 0 0 5px 5px; z-index: 100;
+    }
+    .dropdown-menu li a {
+        padding: 10px 20px; display: block;
+        white-space: nowrap; border-bottom: none;
+    }
+    .dropdown-menu li a:hover {
+        background-color: var(--light-gray); border-color: transparent;
+    }
+    .has-dropdown:hover > .dropdown-menu { display: block; }
+    
+    /* --- Reszponzivitás --- */
+    @media (max-width: 768px) {
+        #hamburger-btn { display: block; }
+        .desktop-only { display: none; }
+        
+        .main-header { justify-content: space-between; }
+        .top-bar .container { flex-direction: column; gap: 10px; }
+
+        nav#main-nav {
+            display: none; position: absolute; top: 100%; /* A fejléc aljához igazodik */
+            left: 0; width: 100%;
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px);
+        }
+        
+        nav#main-nav.nav-open { display: block; }
+        nav#main-nav ul {
+            flex-direction: column; width: 100%;
+            text-align: center; padding: 10px 0;
+        }
+        nav#main-nav li { padding: 10px 0; }
+        .hero h1 { font-size: 2.2em; }
+
+        .has-dropdown .dropdown-menu {
+            display: none; position: static; box-shadow: none;
+            width: 100%; background-color: #e9eef3;
+            padding-left: 20px;
+        }
+        .has-dropdown.dropdown-open > .dropdown-menu { display: block; }
+        #cookie-banner { flex-direction: column; text-align: center; gap: 15px; }
+    }
+    /* --- IDŐPONTOK SZEKCIÓ STÍLUSOK --- */
+.section-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+}
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+.timeline-icon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: var(--white);
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    top: 25px;
+    z-index: 10;
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+.timeline-item:nth-child(odd) .timeline-icon {
+    right: -25px;
+}
+.timeline-item:nth-child(even) .timeline-icon {
+    left: -25px;
+}
+.timeline-content {
+    padding: 20px 30px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+.timeline-content h3 {
+    margin-top: 0;
+}
+/* Reszponzivitás az idővonalhoz */
+@media (max-width: 768px) {
+    .timeline::after {
+        left: 25px;
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+        left: 0 !important;
+        text-align: left !important;
+    }
+    .timeline-item .timeline-icon {
+        left: 0;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <a href="mailto:caregocsomag@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/></svg> caregocsomag@gmail.com</a>
+                <a href="tel:+36307988354">
+                    <svg class="flag-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"><rect y="0" width="900" height="200" fill="#d43516"/><rect y="200" width="900" height="200" fill="#fff"/><rect y="400" width="900" height="200" fill="#388d02"/></svg>
+                    +36 30 798 8354
+                </a>
+                <a href="tel:+36701486392">
+                    <svg class="flag-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"><rect y="0" width="900" height="200" fill="#d43516"/><rect y="200" width="900" height="200" fill="#fff"/><rect y="400" width="900" height="200" fill="#388d02"/></svg>
+                    +36 70 148 6392
+                </a>
+            </div>
+        </div>
+        <div class="main-header container">
+            <a href="/" class="logo">
+                <img src="/assets/img/carego_logo.jpg?v=1.1" alt="Carego logó">
+            </a>
+            
+            <nav id="main-nav">
+    <ul>
+        <li class="has-dropdown"> <a href="#szolgaltatasok">Szolgáltatások</a>
+            <ul class="dropdown-menu">
+                <li><a href="csomagkuldes.html">Csomagküldés</a></li>
+                <li><a href="ceges-megrendeles.html">Céges áruszállítás</a></li>
+                <li><a href="koltoztetes.html">Költöztetés</a></li>
+            </ul>
+        </li>
+        </ul>
+</nav>
+        </li>
+        <li><a href="#arak">Árak</a></li>
+        <li><a href="#idopontok">Időpontok</a></li>
+        <li><a href="#kapcsolat">Kapcsolat</a></li>
+    </ul>
+</nav>
+            
+            <a href="foglalas.html" class="cta-button desktop-only">Megrendelés</a>
+
+            <button id="hamburger-btn" aria-label="Menü megnyitása" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Megbízható Csomagküldés az Európai Unión belül</h1>
+            <p>Gyors, biztonságos és háztól-házig szállítás, kedvező árakon. Hozzuk-visszük csomagjait!</p>
+            <a href="foglalas.html" class="cta-button">Azonnali Megrendelés</a>
+        </section>
+
+        <section id="szolgaltatasok" class="services-section">
+            <div class="container">
+                <div class="services-intro">
+                    <h2>Szolgáltatásaink</h2>
+                    <p>Legyen szó egy kis dobozról, egy bicikliről vagy egy teljes költözésről, megbízható és precíz megoldást kínálunk háztól-házig, Európa-szerte.</p>
+                </div>
+                <div class="services-grid">
+    <a href="csomagkuldes.html" class="service-card-link">
+        <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-box-open"></i></div>
+            <h3>Háztól-házig Csomagszállítás</h3>
+            <p>A feladott küldeményt a megadott címen vesszük fel és közvetlenül a címzett ajtajáig szállítjuk, levéve minden terhet a válladról.</p>
+        </div>
+    </a>
+    <a href="ceges-megrendeles.html" class="service-card-link">
+        <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-warehouse"></i></div>
+            <h3>Céges áruk szállítása</h3>
+            <p>Raklapos céges áruk szállítása Európai országokba, megbízható logisztikai háttérrel és pontos érkezéssel.</p>
+        </div>
+    </a>
+    <a href="koltoztetes.html" class="service-card-link">
+        <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-truck-moving"></i></div>
+            <h3>Költöztetés és Nagyobb Tárgyak</h3>
+            <p>Vállaljuk teljes lakások, irodák költöztetését, valamint nagyobb méretű tárgyak, például biciklik, bútorok biztonságos szállítását is.</p>
+        </div>
+    </a>
+    <a href="egyedi-megoldasok.html" class="service-card-link">
+        <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
+            <h3>Személyre Szabott Megoldások</h3>
+            <p>Minden szállítás más. Egyedi igények esetén keress minket bizalommal, és kidolgozzuk a számodra legkedvezőbb, személyre szabott megoldást.</p>
+        </div>
+    </a>
+</div>
+
+        <section id="arak" class="pricing-section">
+            <div class="container">
+                <h2>Csomagszállításunk díjai</h2>
+                <p class="subtitle">A díjszabásról minden részletet megtalál az alábbi gombra kattintva.</p>
+                <button id="open-pricing-modal-btn" class="cta-button">Részletes díjak</button>
+            </div>
+        </section>
+    </main>
+<section id="idopontok" class="content-section">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Következő járataink</h2>
+                    <p>Rendszeresen, 10-12 naponta indulunk. A pontos dátumokról és a foglaltságról érdeklődj telefonon vagy emailben!</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                        <div class="timeline-content">
+                            <h3>Indulás Magyarországról (EU felé)</h3>
+                            <p><strong>Szeptember 25-27.</strong> (Várható érkezés: 2-4 nap)</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fa-solid fa-house-chimney"></i></div>
+                        <div class="timeline-content">
+                            <h3>Érkezés Magyarországra</h3>
+                            <p><strong>Október 5-7.</strong> (Felvétel az EU-ban: kb. Október 1-3.)</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                        <div class="timeline-content">
+                            <h3>Indulás Magyarországról (EU felé)</h3>
+                            <p><strong>Október 15-17.</strong> (Várható érkezés: 2-4 nap)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <footer id="kapcsolat">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>Carego</h3>
+                <p>EU Csomagküldés. Megbízhatóság, gyorsaság és precizitás Európa-szerte.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61580787128169" target="_blank" aria-label="Carego Facebook Oldala">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Hasznos Linkek</h3>
+                <ul>
+                    <li><a href="#arak">Árak és Csomagkategóriák</a></li>
+                    <li><a href="#">Általános Szerződési Feltételek (ÁSZF)</a></li>
+                    <li><a href="adatkezeles.html" target="_blank">Adatkezelési Tájékoztató</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Kapcsolat</h3>
+                <p><strong>Email:</strong><br> <a href="mailto:caregocsomag@gmail.com">caregocsomag@gmail.com</a></p>
+                <p><strong>Telefonszám:</strong><br> <a href="tel:+36307988354">+36 30 798 8354</a><br><a href="tel:+36701486392">+36 70 148 6392</a></p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Carego - Minden jog fenntartva.</p>
+        </div>
+    </footer>
+
+    <div id="contact-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Ajánlatkérés túlméretes csomagra</h2>
+            <p>Kérjük, adja meg az alábbi adatokat, és hamarosan felvesszük Önnel a kapcsolatot!</p>
+            <form id="contact-form" action="https://formspree.io/f/mnnbkpvj" method="POST">
+                <div class="form-group">
+                    <label for="contact-nev">Teljes Név</label>
+                    <input type="text" id="contact-nev" name="nev" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-telefon">Telefonszám</label>
+                    <input type="tel" id="contact-telefon" name="telefon" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-cim">Felvételi Cím</label>
+                    <input type="text" id="contact-cim" name="cim" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-megjegyzes">Csomag leírása, megjegyzés</label>
+                    <textarea id="contact-megjegyzes" name="megjegyzes" rows="4"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Ajánlatkérés elküldése</button>
+            </form>
+        </div>
+    </div>
+    
+    <div id="pricing-modal" class="modal-overlay">
+        <div class="modal-content wide">
+            <span class="close-button">&times;</span>
+            <h2>Részletes Díjszabás</h2>
+            <p class="small-text">(Ausztria, Németország, Hollandia, Belgium, Luxemburg, Franciaország)</p>
+            <table class="pricing-table">
+                <thead><tr><th>Csomag tömege</th><th>Max. térfogat</th><th>Bruttó Árak</th></tr></thead>
+                <tbody>
+                    <tr><td>0-5 kg-ig</td><td>0.012 m³</td><td>~ 25 €</td></tr>
+                    <tr><td>5-10 kg-ig</td><td>0.08 m³</td><td>~ 32 €</td></tr>
+                    <tr><td>10-25 kg-ig</td><td>0.14 m³</td><td>~ 41 €</td></tr>
+                    <tr><td>25-37 kg-ig</td><td>0.21 m³</td><td>~ 60 €</td></tr>
+                    <tr><td>37-50 kg-ig</td><td>0.28 m³</td><td>~ 75 €</td></tr>
+                    <tr><td>50-62 kg-ig</td><td>0.35 m³</td><td>~ 90 €</td></tr>
+                    <tr><td>62-75 kg-ig</td><td>0.42 m³</td><td>~ 110 €</td></tr>
+                    <tr><td>75-87 kg-ig</td><td>0.56 m³</td><td>~ 121 €</td></tr>
+                    <tr><td>87-100 kg-ig</td><td>0.72 m³</td><td>~ 135 €</td></tr>
+                </tbody>
+            </table>
+            
+            <h3>További díjak és információk</h3>
+            <ul class="info-list">
+                <li><strong>Bicikli szállítás:</strong> ~65 € (kormány elfordítva) / ~78 € (egyben hagyva)</li>
+                <li><strong>Gyermekkerékpár szállítás (16"-ig):</strong> ~45 €</li>
+                <li><strong>Kieső területi felár:</strong> ~10 €</li>
+                <li><strong>Visszcsomag kedvezmény:</strong> ~5 € kedvezmény</li>
+                <li>Nagyobb volumenű szállítás vagy költöztetés esetén kérjen egyedi árajánlatot!</li>
+            </ul>
+            <p class="disclaimer">Az euróban feltüntetett árak tájékoztató jellegűek, az aktuális árfolyam függvényében változhatnak.</p>
+            
+            <div class="modal-footer">
+                <a href="foglalas.html" class="cta-button">Tovább a megrendeléshez</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="cookie-banner">
+        <p>Ez a weboldal sütiket (cookie-kat) használ a legjobb felhasználói élmény biztosítása érdekében. <a href="adatkezeles.html" target="_blank">Részletek</a></p>
+        <button id="cookie-accept-btn">Elfogadom</button>
+    </div>
+
+    <script>
+        // --- RÉSZLETES ÁRAK MODÁL VEZÉRLÉSE ---
+        const pricingModal = document.getElementById('pricing-modal');
+        const openPricingModalBtn = document.getElementById('open-pricing-modal-btn');
+        const closePricingModalBtn = pricingModal.querySelector('.close-button');
+        openPricingModalBtn.addEventListener('click', () => {
+            pricingModal.style.display = 'flex';
+            setTimeout(() => { pricingModal.style.opacity = '1'; pricingModal.querySelector('.modal-content').style.transform = 'scale(1)'; }, 10);
+        });
+        function closePricingModal() {
+            pricingModal.style.opacity = '0';
+            pricingModal.querySelector('.modal-content').style.transform = 'scale(0.9)';
+            setTimeout(() => { pricingModal.style.display = 'none'; }, 300);
+        }
+        closePricingModalBtn.addEventListener('click', closePricingModal);
+        pricingModal.addEventListener('click', (event) => { if (event.target === pricingModal) { closePricingModal(); } });
+
+        // --- KAPCSOLATFELVÉTELI MODÁL VEZÉRLÉSE (JAVÍTVA) ---
+        const contactModal = document.getElementById('contact-modal');
+        if (contactModal) {
+            const openModalBtn = document.getElementById('open-contact-modal-btn');
+            const closeModalBtn = contactModal.querySelector('.close-button');
+
+            openModalBtn.addEventListener('click', () => {
+                contactModal.style.display = 'flex';
+                setTimeout(() => {
+                    contactModal.style.opacity = '1';
+                    contactModal.querySelector('.modal-content').style.transform = 'scale(1)';
+                }, 10);
+            });
+
+            function closeModal() {
+                contactModal.style.opacity = '0';
+                contactModal.querySelector('.modal-content').style.transform = 'scale(0.9)';
+                setTimeout(() => {
+                    contactModal.style.display = 'none';
+                }, 300);
+            }
+
+            closeModalBtn.addEventListener('click', closeModal);
+            contactModal.addEventListener('click', (event) => {
+                if (event.target === contactModal) { closeModal(); }
+            });
+        }
+        
+        // --- COOKIE BANNER VEZÉRLÉSE (JAVÍTVA) ---
+        const cookieBanner = document.getElementById('cookie-banner');
+        const cookieAcceptBtn = document.getElementById('cookie-accept-btn');
+        // Csak akkor futtatjuk, ha a gomb létezik
+        if (cookieAcceptBtn) {
+            if (!localStorage.getItem('cookieConsent')) {
+                cookieBanner.style.display = 'flex';
+            }
+            cookieAcceptBtn.addEventListener('click', () => {
+                cookieBanner.style.display = 'none';
+                localStorage.setItem('cookieConsent', 'true');
+            });
+        }
+
+        // --- HAMBURGER MENÜ VEZÉRLÉSE ---
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mainNav = document.getElementById('main-nav');
+        hamburgerBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('nav-open');
+            hamburgerBtn.classList.toggle('open');
+            const isExpanded = mainNav.classList.contains('nav-open');
+            hamburgerBtn.setAttribute('aria-expanded', isExpanded);
+        });
+
+        // --- LENYÍLÓ MENÜ MŰKÖDTETÉSE MOBILON ---
+        document.querySelectorAll('.has-dropdown > a').forEach(menuItem => {
+            menuItem.addEventListener('click', function(event) {
+                if (window.innerWidth <= 768) {
+                    event.preventDefault();
+                    this.parentElement.classList.toggle('dropdown-open');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

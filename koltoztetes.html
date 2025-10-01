@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="hu-HU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Költöztetés Árajánlatkérés - Carego</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Költöztetés & Nagyobb Tárgyak - Árajánlatkérés</h1>
+        <p class="intro-text">Kérjük, töltse ki az alábbi űrlapot a lehető legrészletesebben, hogy személyre szabott, pontos árajánlatot adhassunk Önnek.</p>
+        
+        <form action="https://formspree.io/f/mnnbkpvj" method="POST">
+            
+            <fieldset>
+                <legend>Személyes adatok</legend>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nev">Teljes Név</label>
+                        <input type="text" id="nev" name="Név" required>
+                        </div>
+                        <div id="header-placeholder"></div>
+                        <div id="footer-placeholder"></div>
+                        <script src="script.js"></script>
+                        <div class="form-group">
+                        <label for="email">Email cím</label>
+                        <input type="email" id="email" name="Email" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="telefon">Telefonszám</label>
+                        <input type="tel" id="telefon" name="Telefonszám" required>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Szállítási Részletek</legend>
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label for="felveteli-cim">Felvételi Cím (Irányítószám, Város, Utca, Házszám)</label>
+                        <input type="text" id="felveteli-cim" name="Felvételi Cím" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="felveteli-emelet">Emelet / Lift</label>
+                        <input type="text" id="felveteli-emelet" name="Felvételi Emelet/Lift" placeholder="pl. 3. emelet, lift van">
+                    </div>
+                    <div class="form-group">
+                        <label for="koltozes-datum">Költözés tervezett időpontja</label>
+                        <input type="text" id="koltozes-datum" name="Költözés Dátuma" placeholder="pl. 2025. Október közepe">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="lerakasi-cim">Lerakási Cím (Ország, Irányítószám, Város, Utca, Házszám)</label>
+                        <input type="text" id="lerakasi-cim" name="Lerakási Cím" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lerakasi-emelet">Emelet / Lift</label>
+                        <input type="text" id="lerakasi-emelet" name="Lerakási Emelet/Lift" placeholder="pl. Földszint">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Költöztetendő Tárgyak</legend>
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label for="targyak-listaja">Kérjük, sorolja fel a főbb bútorokat, nagyobb tárgyakat</label>
+                        <textarea id="targyak-listaja" name="Tárgyak Listája" rows="8" placeholder="pl. 1 db kanapé (3 személyes), 1 db franciaágy, 1 db bicikli, kb. 30 db doboz..." required></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="megjegyzes">Egyéb megjegyzés, különleges kérés</label>
+                        <textarea id="megjegyzes" name="Megjegyzés" rows="4" placeholder="pl. Törékeny tárgyak, antik bútor, parkolási információk..."></textarea>
+                    </div>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="submit-btn">Árajánlatkérés Elküldése</button>
+        </form>
+
+        <a href="index.html" class="back-link">Vissza a főoldalra</a>
+    </div>
+</body>
+</html>

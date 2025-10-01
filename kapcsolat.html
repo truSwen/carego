@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hu-HU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapcsolat - Carego - Carego</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+     <div id="footer-placeholder"></div>
+    <script src="script.js"></script>
+    <div class="container">
+        <h1>Lépj velünk kapcsolatba!</h1>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Elérhetőségeink</h2>
+                 <p><i class="fa-solid fa-phone"></i> <a href="tel:+36701486392">+36 70 148 6392</a></p>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:+36307988354">+36 30 798 8354</a></p>
+                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:caregocsomag@gmail.com">caregocsomag@gmail.com</a></p>
+                <p><i class="fa-brands fa-facebook-f"></i> <a href="https://www.facebook.com/profile.php?id=61580787128169" target="_blank">Facebook Oldalunk</a></p>
+                
+                <h2>Telephely</h2>
+                <p><i class="fa-solid fa-location-dot"></i> 1194 Budapest Vas Gereben utca 40.</p>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1070.7931224230376!2d19.149011290180095!3d47.44646350864243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741c3c60238d213%3A0x2aebf03580b6c077!2sCarego!5e0!3m2!1sen!2shu!4v1758143773019!5m2!1sen!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h2>Küldj üzenetet!</h2>
+                <form action="https://formspree.io/f/mnnbkpvj" method="POST">
+                    <div class="form-group">
+                        <label for="name">Név</label>
+                        <input type="text" name="Név" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email cím</label>
+                        <input type="email" name="Email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Üzenet</label>
+                        <textarea name="Üzenet" id="message" rows="8" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Üzenet elküldése</button>
+                </form>
+            </div>
+        </div>
+        <a href="index.html" class="back-link">Vissza a főoldalra</a>
+    </div>
+</body>
+</html>

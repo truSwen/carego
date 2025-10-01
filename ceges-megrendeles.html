@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="hu-HU">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Céges megrendelés - Carego</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div id="footer-placeholder"></div>
+    <script src="script.js"></script>
+    <div class="container">
+        <h1>Céges és raklapos áruszállítás</h1>
+        <div class="intro-text">
+            <p>A CareGo Magyarország egész területéről <strong>FELÁR nélkül</strong> vállalja, raklapos áruk felvételét és kiszállítását Ausztriába, Németországba, Hollandiába, Belgiumba, Luxemburgba és Franciaországba.</p>
+            <p>Az oldalunkon közzétett időpontok bármelyikén fel tudjuk venni áruikat és a megadott kézbesítési időintervallumban kiszállítjuk azokat. Cégtől-Cégig. Egész autós rakományok esetén saját időpontunktól akár el is tudunk tekinteni.</p>
+            <p>Egyedi árajánlattal kapcsolatban kérem vegye fel velünk mihamarabb a kapcsolatot, vagy az árajánlatkérés menüpont alatt küldje el áruja pontos méreteit és súlyát.</p>
+            <p>Folyamatos megbízások esetén, egységes előre megbeszélt kedvezményes szállítási díjat fogunk tudni adni.</p>
+            <p><strong>Megrendelést minden esetben szükséges leadni a helyes fel és lerakodási adatokkal, valamint elérhetőségekkel.</strong></p>
+        </div>
+        
+        <hr>
+
+        <h2>Megrendelő és Árajánlatkérő Űrlap</h2>
+        <form action="https://formspree.io/f/mnnbkpvj" method="POST">
+            
+            <fieldset>
+                <legend>Feladó adatai</legend>
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label for="felado-cegnev">Cégnév</label>
+                        <input type="text" id="felado-cegnev" name="Feladó Cégnév" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="felado-kapcsolattarto">Kapcsolattartó neve</label>
+                        <input type="text" id="felado-kapcsolattarto" name="Feladó Kapcsolattartó" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="felado-telefon">Telefonszám</label>
+                        <input type="tel" id="felado-telefon" name="Feladó Telefonszám" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="felado-cim">Felvételi cím (Irányítószám, Város, Utca, Házszám)</label>
+                        <input type="text" id="felado-cim" name="Felvételi cím" required>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Címzett adatai</legend>
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label for="cimzett-cegnev">Cégnév</label>
+                        <input type="text" id="cimzett-cegnev" name="Címzett Cégnév" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cimzett-kapcsolattarto">Kapcsolattartó neve</label>
+                        <input type="text" id="cimzett-kapcsolattarto" name="Címzett Kapcsolattartó" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cimzett-telefon">Telefonszám</label>
+                        <input type="tel" id="cimzett-telefon" name="Címzett Telefonszám" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="cimzett-cim">Kézbesítési cím (Ország, Irányítószám, Város, Utca, Házszám)</label>
+                        <input type="text" id="cimzett-cim" name="Kézbesítési cím" required>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Szállítmány adatai</legend>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="raklap-db">Raklapok száma</label>
+                        <input type="number" id="raklap-db" name="Raklapok száma" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="suly">Összsúly (kg)</label>
+                        <input type="number" id="suly" name="Összsúly (kg)" min="1" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="aru-leiras">Áru megnevezése, leírása (méretek, csomagolás)</label>
+                        <textarea id="aru-leiras" name="Áru leírása" rows="5" required></textarea>
+                    </div>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="submit-btn">Megrendelés / Árajánlatkérés elküldése</button>
+        </form>
+
+        <a href="index.html" class="back-link">Vissza a főoldalra</a>
+    </div>
+</body>
+</html>

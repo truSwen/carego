@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hu-HU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megrendelés véglegesítése - Carego</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Megrendelés véglegesítése</h1>
+        
+        <div class="summary">
+            <h2>Rendelés összesítő</h2>
+            <div class="summary-item"><span>Szállítási díj:</span> <strong id="summary-ar">Betöltés...</strong></div>
+            <div class="summary-item"><span>Összsúly:</span> <strong id="summary-suly">Betöltés...</strong></div>
+            <div class="summary-item"><span>Össztérfogat:</span> <strong id="summary-terfogat">Betöltés...</strong></div>
+            <div class="summary-item"><span>Csomagok:</span> <strong id="summary-reszletek" style="text-align: right;">Betöltés...</strong></div>
+        </div>
+
+        <div class="order-form">
+            <h2>Személyes adatok</h2>
+            <form action="https://formspree.io/f/mnnbkpvj" method="POST">
+                <input type="hidden" name="Szállítási Díj" id="form-ar">
+                <input type="hidden" name="Összsúly" id="form-suly">
+                <input type="hidden" name="Össztérfogat" id="form-terfogat">
+                <input type="hidden" name="Csomagok Részletei" id="form-reszletek">
+                
+                <div class="form-group">
+                    <label for="nev">Teljes név</label>
+                    <input type="text" id="nev" name="Név" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email cím</label>
+                    <input type="email" id="email" name="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefon">Telefonszám</label>
+                    <input type="tel" id="telefon" name="Telefonszám" required>
+                </div>
+                 <div class="form-group">
+                    <label for="felveteli-cim">Felvételi cím</label>
+                    <input type="text" id="felveteli-cim" name="Felvételi Cím" required>
+                </div>
+                <div class="form-group">
+    <label for="megjegyzes">Megjegyzés (opcionális)</label>
+    <textarea id="megjegyzes" name="Megjegyzés" rows="4" placeholder="pl. Kapucsengő kódja, speciális kérések..."></textarea>
+</div>
+                <div class="form-group">
+                    <label for="kezbesitesi-cim">Kézbesítési cím</label>
+                    <input type="text" id="kezbesitesi-cim" name="Kézbesítési Cím" required>
+                </div>
+                <button type="submit" class="submit-btn">Megrendelés elküldése</button>
+            </form>
+        </div>
+        <a href="kalkulator.html" class="back-link">Vissza a kalkulátorhoz</a>
+    </div>
+<div id="header-placeholder"></div>
+    <div id="footer-placeholder"></div>
+    <script src="script.js"></script>
+</body>
+</html>

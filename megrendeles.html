@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hu-HU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megrendelés - Carego</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div id="footer-placeholder"></div>
+    <script src="script.js"></script>
+    <div class="form-container">
+        <h1>Csomagküldés Megrendelése</h1>
+        <form id="order-form" action="https://formspree.io/f/mnnbkpvj" method="POST">
+            <div class="form-group">
+                <label for="csomag">Kiválasztott csomag</label>
+                <select id="csomag" name="csomag" required>
+                    <option value="" disabled selected>Válasszon csomagot...</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label for="nev">Teljes név</label>
+                <input type="text" id="nev" name="nev" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail cím</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="telefon">Telefonszám</label>
+                <input type="tel" id="telefon" name="telefon" required>
+            </div>
+            <div class="form-group">
+                <label for="cim">Szállítási cím</label>
+                <input type="text" id="cim" name="cim" required>
+            </div>
+            <div class="form-group">
+                <label for="megjegyzes">Megjegyzés (opcionális)</label>
+                <textarea id="megjegyzes" name="megjegyzes" rows="4"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Megrendelés elküldése</button>
+        </form>
+        <a href="index.html#arak" class="back-link">Vissza az árakhoz</a>
+    </div>
+
+</body>
+</html>

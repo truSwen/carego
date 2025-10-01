@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hu-HU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árkalkulátor és kosár - Carego</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <div id="footer-placeholder"></div>
+    <script src="script.js"></script>
+    <div class="container">
+        <h1>Árkalkulátor és Megrendelés</h1>
+        <div class="calculator-grid">
+            <div class="calculator">
+                <h2>Csomag hozzáadása</h2>
+                <div class="form-group">
+                    <label>Méretek (cm)</label>
+                    <div class="input-group">
+                        <input type="number" id="width" placeholder="Szélesség" min="1">
+                        <input type="number" id="length" placeholder="Hosszúság" min="1">
+                        <input type="number" id="height" placeholder="Magasság" min="1">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="weight">Súly (kg)</label>
+                    <input type="number" id="weight" placeholder="pl. 15" min="1">
+                </div>
+                <button class="add-btn" onclick="addToCart()">Hozzáadás a kosárhoz</button>
+                <div class="info-box">
+                    <h4>Hogyan számolj térfogatot?</h4>
+                    <p>A térfogat (m³) kiszámításához a cm-ben megadott méreteket szorozd össze, majd oszd el 1,000,000-val.<br>
+                    <strong>Példa:</strong> 50x40x30 cm = 60,000 cm³ → 0.06 m³.</p>
+                </div>
+            </div>
+            <div class="cart-summary">
+                <h2>Kosár tartalma</h2>
+                <ul id="cart-items">
+                    </ul>
+                <div class="cart-total">
+                    <div id="total-weight">Összsúly: <span>0 kg</span></div>
+                    <div id="total-volume">Össztérfogat: <span>0 m³</span></div>
+                    <div id="total-price">Szállítási díj: <span>0 €</span></div>
+                </div>
+                <a href="#" role="button" class="checkout-btn disabled" id="checkout-btn">Tovább a megrendeléshez</a>
+                <a href="index.html" class="back-link">Vissza a főoldalra</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
