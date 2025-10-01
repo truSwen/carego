@@ -1,40 +1,169 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="hu-HU">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamarosan Jövünk!</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-        }
-        .container {
-            max-width: 600px;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 2.5em;
-            color: #1d2129;
-            margin-bottom: 0.5em;
-        }
-        p {
-            font-size: 1.2em;
-            color: #606770;
-        }
-    </style>
+    <title>EU & UK Csomagküldés - Carego</title>
+    <meta name="google-site-verification" content="jM0J9nSlbdc1fnQFSxlZYqpEP2P939tidaDXnnHgUvw" />
+    <meta name="description" content="Megbízható csomagküldés háztól-házig az Egyesült Királyságba és az EU-ba. A Carego gyors, precíz szállítást kínál kedvező árakon.">
+    <meta name="keywords" content="csomagküldés, EU csomagküldés, UK szállítás, Anglia, futár, Carego, csomagszállítás Európába">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 </head>
 <body>
-    <div class="container">
-        <h1>Az oldal feltöltés és karbantartás alatt áll.</h1>
-        <p>Hamarosan visszatérünk! Köszönjük a türelmedet.</p>
+    
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="hero">
+            <h1>Megbízható csomagküldés az Egyesült Királyságba és az Európai Unión belül</h1>
+            <p>Gyors, biztonságos és háztól-házig szállítás, kedvező árakon. Hozzuk-visszük csomagjait!</p>
+            <a href="foglalas.html" class="cta-button" id="hero-order-btn">Azonnali megrendelés</a>
+        </section>
+
+        <section id="szolgaltatasok" class="services-section">
+            <div class="container">
+                <div class="services-intro">
+                    <h2>Szolgáltatásaink</h2>
+                    <p>Legyen szó egy kis dobozról, egy bicikliről vagy egy teljes költözésről, megbízható és precíz megoldást kínálunk háztól-házig, Európa-szerte.</p>
+                </div>
+                <div class="services-grid">
+                    <a href="kalkulator.html" class="service-card-link">
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fa-solid fa-box-open"></i></div>
+                            <h3>Háztól-házig csomagszállítás</h3>
+                            <p>A feladott küldeményt a megadott címen vesszük fel és közvetlenül a címzett ajtajáig szállítjuk, levéve minden terhet a válladról.</p>
+                        </div>
+                    </a>
+                    <a href="ceges-megrendeles.html" class="service-card-link">
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fa-solid fa-warehouse"></i></div>
+                            <h3>Céges áruk szállítása</h3>
+                            <p>Raklapos céges áruk szállítása Európai országokba, megbízható logisztikai háttérrel és pontos érkezéssel.</p>
+                        </div>
+                    </a>
+                    <a href="koltoztetes.html" class="service-card-link">
+                        <div class="service-card">
+                            <div class="service-icon"><i class="fa-solid fa-truck-moving"></i></div>
+                            <h3>Költöztetés és nagyobb tárgyak</h3>
+                            <p>Vállaljuk teljes lakások, irodák költöztetését, valamint nagyobb méretű tárgyak, például biciklik, bútorok biztonságos szállítását is.</p>
+                        </div>
+                    </a>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
+                        <h3>Személyre szabott megoldások</h3>
+                        <p>Minden szállítás más. Egyedi igények esetén keress minket bizalommal, és kidolgozzuk a számodra legkedvezőbb, személyre szabott megoldást.</p>
+                        <button id="open-contact-modal-btn" class="cta-button" style="margin-top: auto;">Egyedi ajánlatkérés</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="arak" class="pricing-section">
+            <div class="container">
+                <h2>Csomagszállításunk díjai</h2>
+                <p class="subtitle">Használd kalkulátorunkat a pontos díj becsléséhez, vagy tekintsd meg részletes árlistánkat!</p>
+                <button id="open-calculator-modal-btn" class="highlight-cta">
+                    <i class="fa-solid fa-calculator"></i> Árkalkulátor megnyitása
+                </button>
+                <a href="arak.html" class="secondary-link">Részletes árlista megtekintése →</a>
+            </div>
+        </section>
+
+        <section id="idopontok" class="content-section">
+            <div class="container">
+                <div class="section-intro">
+                    <h2>Következő járataink</h2>
+                    <p>Rendszeresen, 10-12 naponta indulunk. A pontos dátumokról és a foglaltságról érdeklődj telefonon vagy emailben!</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                        <div class="timeline-content">
+                            <h3>Indulás Magyarországról</h3>
+                            <p><strong>Október 15-17.</strong></p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="fa-solid fa-house-chimney"></i></div>
+                        <div class="timeline-content">
+                            <h3>Érkezés Magyarországra</h3>
+                            <p><strong>Október 25-27.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <div id="contact-modal" class="modal-overlay">
+         <div class="modal-content">
+            <span class="close-button">×</span>
+            <h2>Ajánlatkérés egyedi szállításra</h2>
+            <p>Kérjük, adja meg az alábbi adatokat, és hamarosan felvesszük Önnel a kapcsolatot!</p>
+            <form id="contact-form" action="https://formspree.io/f/mnnbkpvj" method="POST">
+                <div class="form-group">
+                    <label for="contact-nev">Teljes név</label>
+                    <input type="text" id="contact-nev" name="nev" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-telefon">Telefonszám</label>
+                    <input type="tel" id="contact-telefon" name="telefon" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-megjegyzes">Szállítás leírása, megjegyzés</label>
+                    <textarea id="contact-megjegyzes" name="megjegyzes" rows="4"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Ajánlatkérés elküldése</button>
+            </form>
+        </div>
     </div>
+    <div id="calculator-modal" class="modal-overlay">
+         <div class="modal-content wide">
+            <span class="close-button">×</span>
+            <h1>Árkalkulátor</h1>
+            <div class="calculator-grid">
+                <div class="calculator">
+                    <h2>Csomag hozzáadása</h2>
+                    <div class="form-group">
+                        <label for="region-select-calc">Régió:</label>
+                        <select id="region-select-calc" class="region-selector">
+                            <option value="EU">EU</option>
+                            <option value="UK">Egyesült Királyság</option>
+                            <option value="CZ">Csehország</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><label>Méretek (cm)</label><div class="input-group"><input type="number" id="width" placeholder="Szélesség" min="1"><input type="number" id="length" placeholder="Hosszúság" min="1"><input type="number" id="height" placeholder="Magasság" min="1"></div></div>
+                    <div class="form-group"><label for="weight">Súly (kg)</label><input type="number" id="weight" placeholder="pl. 15" min="1"></div>
+                    <button class="add-btn" onclick="addToCart()">Hozzáadás a kosárhoz</button>
+                    <div class="info-box"><h4>Hogyan számolj térfogatot?</h4><p>A térfogat (m³) kiszámításához a cm-ben megadott méreteket szorozd össze, majd oszd el 1,000,000-val.<br><strong>Példa:</strong> 50x40x30 cm = 60,000 cm³ → 0.06 m³.</p></div>
+                </div>
+                <div class="cart-summary">
+                    <h2>Kosár tartalma</h2>
+                    <ul id="cart-items"><li>A kosár jelenleg üres.</li></ul>
+                    <div class="cart-total">
+                        <div id="total-weight">Összsúly: <span>0.00 kg</span></div>
+                        <div id="total-volume">Össztérfogat: <span>0.000 m³</span></div>
+                        <div id="total-price">Szállítási díj: <span>0 €</span></div>
+                    </div>
+                    <a href="#" role="button" class="checkout-btn disabled" id="checkout-btn">Tovább a megrendeléshez</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cookie-banner">
+        <p>Ez a weboldal sütiket (cookie-kat) használ a legjobb felhasználói élmény biztosítása érdekében. <a href="adatkezeles.html" target="_blank">Részletek</a></p>
+        <button id="cookie-accept-btn">Elfogadom</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
